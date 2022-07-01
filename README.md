@@ -3,13 +3,13 @@
 ####Download docker image
 
 ```
-sudo docker pull chuanchiu/compile-hadoop
+sudo docker pull sss85921/compile-hadoop
 ```
 
-or you can build chuanchiu/comile-hadoop image by your self
+or you can build sss85921/comile-hadoop image by your self
 
 ```
-sudo docker build -t chuanchiu/compile-hadoop .
+sudo docker build -t sss85921/compile-hadoop .
 ```
 
 ####Download [Hadoop source code](http://archive.apache.org/dist/hadoop/core/)
