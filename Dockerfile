@@ -1,11 +1,11 @@
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 
-MAINTAINER kiwenlau <kiwenlau@gmail.com>
+MAINTAINER chuanchiu <sss85921@gmail.com>
 
 # install dependencies for compiling hadoop
 RUN apt-get update && \
     apt-get install -y wget \
-                       openjdk-7-jdk \
+                       openjdk-8-jdk \
                        libprotobuf-dev \
                        protobuf-compiler \
                        maven \
@@ -14,10 +14,12 @@ RUN apt-get update && \
                        pkg-config \
                        libssl-dev \
                        zlib1g-dev \
-                       llvm-gcc \
+                       llvm \
                        automake \
                        autoconf \
                        make
+
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 
 COPY compile.sh /root/compile.sh
 
